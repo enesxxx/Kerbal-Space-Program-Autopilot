@@ -87,11 +87,11 @@ while isPre or isAscending or isCruising or isDescending or isLanding:
 				if timetoapoapsissecond < timetoapoapsisfirst and timetoapoapsisfirst <= 30:
 					rocket.auto_pilot.target_pitch_and_heading(0, 90)
 					rocket.control.throttle = 1
-					print("apoapsise geldik atesledik")
+					print("reached apoapsis, burning")
 				else:
 					if timetoapoapsisfirst == 25:
 						rocket.control.throttle = 0
-						print("gaz kestik apoapsis artıyor")
+						print("stopping burning, time to apoapsis is increasing")
 						time.sleep(10)
 			if periapsis > 80000:
 				rocket.control.throttle = 0
